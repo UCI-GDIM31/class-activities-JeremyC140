@@ -87,7 +87,7 @@ public class CatW3 : MonoBehaviour
         }
 
         if (collision.gameObject.tag.Equals("Items")) { 
-            _health += 20;
+            _health += 20f;
         }
 
         BallW3 ball = collision.gameObject.GetComponent<BallW3>();

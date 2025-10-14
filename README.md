@@ -20,6 +20,11 @@ Syntax error, because a semicolon is missed at the end of a line of code.
 Table 12:
 String GetResponse (int friendShipLv, boolean doesKnowSecret) {}
 
+Monobehavior Questions:
+1. Classes are the general prototype or blueprint that structure the behavior or outline the methods for an object, while components are the specific product that details all of the custom properties and methods. For me, classes are like the "default" of an iphone, for example, which includes the very basic outline like "turning on/off the phone", or "the machinary inside the phones". On the other hand, the components would be the iphones that are customized by each individual users, by which the phone still inherits the basic outlines from its "default" mode. The written action / command coded in the iphone, such as "on/off" (which could be represents by a button controling a boolean), "opening apps", or "swiping to a certain direction". The member variables track all sort of datas in the phone. The memories, storage, the type number of this phone might be stored in the static variables, while the passwords, usernames, or the customization details might be stored in the more dynamic variables (which are altered by their corresponding method). 
+
+2. The balls are speeding up by a scale factor of the speedMultiplier (which I setted to be greater than 1)during collisions in the scene. The getColorMultiplier method is essentially tracking the average speed of the balls are increase the scaling of their rgb colors by 1.5 for each time the speed exceeds the speed threshold. Eventually, the balls are getting brighter and brighter as they collide in the scene. 
+
 
 ## Open-Source Assets
 ### W1
