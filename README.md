@@ -16,6 +16,11 @@ The _bounce variable counts the number of time the ball bounces, which only make
 
 Syntax error, because a semicolon is missed at the end of a line of code. 
 
+### W3
+Table 12:
+String GetResponse (int friendShipLv, boolean doesKnowSecret) {}
+
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
