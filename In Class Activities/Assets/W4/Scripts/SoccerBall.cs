@@ -26,7 +26,7 @@ public class SoccerBall : MonoBehaviour
     private void Update()
     {
         _timeSinceLastGoal += Time.deltaTime;
-        _timeText.text = "Time Since Last Goal: " + _timeSinceLastGoal.ToString("2F") + "s";
+        _timeText.text = "Time Since Last Goal: " + _timeSinceLastGoal.ToString("F2") + "s";
     }
     private void OnTriggerEnter(Collider other)
     {
