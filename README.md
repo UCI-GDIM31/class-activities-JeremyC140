@@ -25,6 +25,24 @@ Monobehavior Questions:
 
 2. The balls are speeding up by a scale factor of the speedMultiplier (which I setted to be greater than 1)during collisions in the scene. The getColorMultiplier method is essentially tracking the average speed of the balls are increase the scaling of their rgb colors by 1.5 for each time the speed exceeds the speed threshold. Eventually, the balls are getting brighter and brighter as they collide in the scene. 
 
+### W4
+Describing Codes (Table #12):
+Line 17: _isGrounded is a member boolean variable that is initialized to "true". The "private" modifier makes this variable only accessible to the class. If other classes want to access or modify this variable, they might have to do so through getter / setter methods written in the class. 
+Line 28: an if statement checking for two conditions: spacebar is pressed AND the status of _isGrounded. The condition is evaluated True when spacebar is pressed and _isGrounded is true (then the actions inside the if statement makes the cat jumps). 
+Line 32: At the same time the cat jumps, _isGrounded is setted false, marking that the cat is currently in air and disallowing the condition to be evaluated True temporary (which avoids double-jumps). 
+
+Collision Discussion (Table #12):
+What solution did you come up with for the collider activity, and why? 
+Specifically- which objects did you add Rigidbodies to, and which object(s) did you check Is Trigger on?
+- Final result:
+Cat: Collider + Rigidbody (also with Freeze Rotation in x, y, z checked XD, or else the world would be rotating once the cat kicks)
+Soccerball: Collider + Rigidbody
+Goal: Collider + isTrigger
+- I've came to these solutions through several trial-and-error. At first, I'm confirmed with adding rigidbody to both the cat and the soccerball because they are the objects that are supposed to collide and move correspondingly during the play. Also, the goal should has isTrigger on because it collides to do action behind the scene (adding score and effects). 
+
+IF your game did not work perfectly the first time you tested it, talk about what you had to fix.
+- The problem that has obstructed me is how the whole world start spinning after the cat kicks the ball. I tested with eliminating the mass of the cat (as I thought the gravity cause the platform to rotate over XD) or checking / unchecking the settings in the rigidbody, but eventually found that freezing the rotation is the key. I should read instructions thoroughly from the start, but I felt proud of discovering the solution on my own. 
+
 
 ## Open-Source Assets
 ### W1
