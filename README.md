@@ -47,6 +47,16 @@ How do we know which gameObject's update() is called first?
 The order is sort of randomized, but basically they will run in the same frame without really noticeable difference in sequence or timing. 
 I'm still curious about the application of the vector shorthand NegativeInfinity and PositiveInfinity :3
 
+Your notes should answer the following questions:
+What member variable(s) does this class need?
+A NavMeshAgent variable (for declaration), and also a transform variable accessible in the inspector that mark the location for the NavMeshAgent to follow with. 
+
+What method(s) does this class need? Should it be something that Unity provides (like Start(), Update(), or a collision method), or one you write?
+To achieve the function that the example showed, we just need the Start method that initialize the NavMeshAgent and set destination for gameObject to move toward.
+
+What should the method(s) do?
+At first, we thought we have to use the SetPath method and design a path for the gameObject. But after receiving the hints, we found that we just have to assign a destination (which would be a Transform variable) to the NavMeshAgent to get the gameObject moving. 
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
