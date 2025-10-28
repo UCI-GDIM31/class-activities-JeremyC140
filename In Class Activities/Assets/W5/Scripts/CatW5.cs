@@ -3,7 +3,7 @@ using UnityEngine;
 public class CatW5 : MonoBehaviour
 {
     [SerializeField] private bool _flipWSControls;
-    [SerializeField] private float _moveSpeed = 1.0f;
+    [SerializeField] private float _moveSpeed = 2.0f;
     [SerializeField] private float _turnSpeed = 1.0f;
     [SerializeField] private Animator _animator;
 
@@ -44,7 +44,24 @@ public class CatW5 : MonoBehaviour
         // MULTIPLY one of your vectors with a certain value to do this. >:)
 
         Vector3 translation = Vector3.zero;
-        
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (_flipWSControls)
+            {
+                translation.z = -1;
+            }
+            else { translation.z = 1; }
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            if (_flipWSControls)
+            {
+                translation.z = 1;
+            }
+            else { translation.z = -1; }
+        }
+        transform.Translate(translation * _moveSpeed * Time.deltaTime);
 
 
         // STEP 1 & 2 ---------------------------------------------------------

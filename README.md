@@ -42,7 +42,10 @@ Goal: Collider + isTrigger
 
 IF your game did not work perfectly the first time you tested it, talk about what you had to fix.
 - The problem that has obstructed me is how the whole world start spinning after the cat kicks the ball. I tested with eliminating the mass of the cat (as I thought the gravity cause the platform to rotate over XD) or checking / unchecking the settings in the rigidbody, but eventually found that freezing the rotation is the key. I should read instructions thoroughly from the start, but I felt proud of discovering the solution on my own. 
-
+### W5
+How do we know which gameObject's update() is called first?
+The order is sort of randomized, but basically they will run in the same frame without really noticeable difference in sequence or timing. 
+I'm still curious about the application of the vector shorthand NegativeInfinity and PositiveInfinity :3
 
 ## Open-Source Assets
 ### W1
