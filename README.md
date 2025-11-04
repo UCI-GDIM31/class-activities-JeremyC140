@@ -56,6 +56,19 @@ To achieve the function that the example showed, we just need the Start method t
 
 What should the method(s) do?
 At first, we thought we have to use the SetPath method and design a path for the gameObject. But after receiving the hints, we found that we just have to assign a destination (which would be a Transform variable) to the NavMeshAgent to get the gameObject moving. 
+### W6
+What member variables does this class need?
+A serializeField variable recording the speed, a serializeField array so the bat gameObjects could be inserted in the inspector, and a boolean variable stating whether the bats are allowed to attack.
+
+
+What methods does this class need? Should it be something that Unity provides (like Start(), Update(), or a collision method), or one you write? What should the method(s) do?
+The Start() method could be used to initialize the variables, such as the boolean.
+The Update() method would traverse all elements in the array if the boolean says true, and probably induce the bats toward the player's position using NavMeshAgent methods. 
+A terminated method that the BatManager could call, which set the GameObject inactive (to stop the movement of the bats).
+Another starting method that set the GameObject active to begin the movements of the bats. 
+A check collision trigger method to detect whether the players collide with the bats (?)
+
+Our table's resource guide: https://docs.google.com/document/d/1JjeQbCCUjY07LrZi49c0iomh2LtX_U5325lBy6n0Y44/edit?usp=sharing 
 
 ## Open-Source Assets
 ### W1
