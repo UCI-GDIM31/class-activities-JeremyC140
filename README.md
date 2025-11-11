@@ -70,6 +70,13 @@ A check collision trigger method to detect whether the players collide with the 
 
 Our table's resource guide: https://docs.google.com/document/d/1JjeQbCCUjY07LrZi49c0iomh2LtX_U5325lBy6n0Y44/edit?usp=sharing 
 
+### W7
+What was wrong with the code in Step 2?
+When we test the original code, we found that if we want the muskrat to move forward / backward after it spins around, it actually goes forward / backward following the global z-axis, rather than the muskrat's own z-axis. We change the vector3.forward to transform.TransformDirection(Vector3.forward) in order for the muskrat to follow its local axis.
+
+Game engineering plan table #12 - I did most of the UI system part
+https://docs.google.com/document/d/10R14qZZetU1eLqxvVqzBbsszbVETJhnGCUluOARTfZg/edit?usp=sharing
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
